@@ -1,28 +1,28 @@
-verify(/.../,
+verify(/\sc/,
        ["my car", "bad cats"], // Should match
        ["camper", "high art"]); // Should not match
 
-verify(/.../,
+verify(/r/,
        ["pop culture", "mad props"],
        ["plop"]);
 
-verify(/.../,
+verify(/ferr[eya]/,
        ["ferret", "ferry", "ferrari"],
        ["ferrum", "transfer A"]);
 
-verify(/.../,
+verify(/ious(\s|$)/,
        ["how delicious", "spacious room"],
        ["ruinous", "consciousness"]);
 
-verify(/.../,
+verify(/\.$/,
        ["bad punctuation ."],
        ["escape the dot"]);
 
-verify(/.../,
+verify(/\w{7,20}/,
        ["hottentottententen"],
        ["no", "hotten totten tenten"]);
 
-verify(/.../,
+verify(/^[rw]/,
        ["red platypus", "wobbling nest"],
        ["earth bed", "learning ape"]);
 
